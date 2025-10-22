@@ -1,74 +1,43 @@
-# React + TypeScript + Vite
+# React ToDo App with TypeScript - Умный менеджер задач 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Современное, интуитивно понятное веб-приложение для управления персональными задачами, разработанное с использованием передовых технологий. 
+Приложение помогает пользователям эффективно организовывать свой рабочий процесс и личные дела.
 
-Currently, two official plugins are available:
+## 🎯 Основная цель
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Создать универсальный инструмент для планирования и отслеживания задач, который помогает пользователям:
 
-## React Compiler
+- 📋 **Организовывать ежедневные дела**
+- 🎯 **Расставлять приоритеты**
+- 📊 **Отслеживать прогресс выполнения**
+- 🚀 **Повышать продуктивность**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Ключевые особенности
 
-## Expanding the ESLint configuration
+### 🚀 **Современный стек технологий**
+- **React** с хуками для управления состоянием
+- **TypeScript** для типобезопасности и лучшей разработки
+- **Redux Toolkit** для глобального управления состоянием
+- **React Hook Form** для эффективной работы с формами
+- **Tailwind CSS** для современного и отзывчивого дизайна
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🎨 **Пользовательский интерфейс**
+- **Чистый и минималистичный дизайн** — фокус на содержании
+- **Адаптивный layout** — работает на всех устройствах
+- **Визуальные приоритеты** — цветовая индикация срочности задач
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 📋 **Функциональность задач**
+- ✅ **Создание задач** с заголовком и описанием
+- 🎯 **Система приоритетов** (Низкий, Средний, Высокий)
+- ✏️ **Редактирование** существующих задач
+- 📅 **Автоматическая дата создания**
+- 📱 **Адаптивные карточки задач**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🔧 **Технические преимущества**
+- **TypeScript** — минимальное количество runtime ошибок
+- **Модульная архитектура** — легко расширять и поддерживать
+- **Reusable components** — единообразие интерфейса
+- **Оптимизированная производительность** — быстрая работа приложения
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# ToDoApp
+## 🖥 Демо
+[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Here-green?style=for-the-badge)](https://to-do-app-inky-pi.vercel.app/)
