@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@tailwind utilities;
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        font-family: var(--font-family-sans), serif;
+        background: var(--color-lightGray);
+    }
+    body {
+        color: var(--color-dark);
+    }
+}
+@theme {
+    /* === ЦВЕТА === */
+    --color-light: #eeeeee;
+    --color-lightGray: #f6f6f6;
+    --color-dark: #1C1D22;
+
+    /* === ТИПОГРАФИКА === */
+    --font-family-sans:
+            'Inter',
+            'SF Pro Display',
+            '-apple-system',
+            'BlinkMacSystemFont',
+            'system-ui';
+
+
+    /* Шрифт для заголовков */
+    --font-family-display:
+            'Cal Sans',
+            'Inter',
+            'SF Pro Display',
+            'system-ui',
+            'sans-serif';
+
+    /* Моноширинный для кода */
+    --font-family-mono:
+            'JetBrains Mono',
+            'Fira Code',
+            'Consolas',
+            'Monaco',
+            'monospace';
+
+    /* Академический/формальный шрифт */
+    --font-family-serif:
+            'Georgia',
+            'Times New Roman',
+            'serif';
+
+}
+@layer components {
+    .container {
+        margin: 0 auto;
+        padding-inline: 20px;
+        @media screen and (max-width: 1000px) {
+            padding-inline: 10px;
+        }
+    }
+    .layout {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(220, 220, 220, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        padding: 20px;
+    }
+    .button {
+        background-color: var(--color-dark);
+        border: none;
+    }
+    .menuLink {
+       transition: 0.3s ease-in-out ;
+    }
+    .menuLink:hover>svg {
+        color: #000;
+    }
+    .menuLink.active {
+        background-color: #fff;
+    }
+    .menuLink.active>svg {
+        stroke: #000;
+    }
+    .content {
+        background-color: #e0e0e0;
+    }
+
+}
+.card {
+    max-width: calc((100% / 4) - 15px);
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 1;
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+        max-width: none;
+        padding: 10px
+    }
+}
+

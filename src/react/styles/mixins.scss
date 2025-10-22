@@ -1,0 +1,26 @@
+//Media queriess
+
+$laptop: 1520px;
+$tablet: 1000px;
+$mobile: 768px;
+$transition: 0.3s ease-in-out;
+@mixin laptop {
+  @media (max-width: #{$laptop}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (max-width: #{$laptop}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
