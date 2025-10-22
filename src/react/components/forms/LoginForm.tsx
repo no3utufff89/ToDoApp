@@ -18,7 +18,7 @@ function LoginForm() {
         dispatch(login(data))
     };
     return (
-        <form action="" className="w-[70%] flex flex-col gap-y-[40px]" onSubmit={handleSubmit(onSubmit)}>
+        <form action="" className="w-full md:w-[70%] flex flex-col gap-y-[40px]" onSubmit={handleSubmit(onSubmit)}>
             <InputWithLabel
                 labelText="Username"
                 id="login"

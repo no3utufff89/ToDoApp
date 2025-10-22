@@ -27,7 +27,7 @@ function Logo(props:LogoProps) {
   `.trim();
 
     return (
-        <Link to={'/'} className="max-w-max mr-auto  md:mr-0 md:mb-[30px]">
+        <Link to={'/'} className="max-w-max   md:mr-0 md:mb-[30px]">
             <img src={logoImage} alt="Logo" className={logoClasses}/>
         </Link>
     )
