@@ -54,7 +54,11 @@ const usersSlice = createSlice({
                 const index = state.data.tasks.findIndex(task => task.id === action.payload.id);
                 if (index !== -1) {
                     state.data.tasks[index] = action.payload;
+                    if (state.user) {
+                        StorageActions.set(state.user, state.data);
+                    }
                 }
+
             }
         },
 
